@@ -2,23 +2,19 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 interface Config {
-    title?: String;
     subtitle?: String;
-    value: Number;
+    value: Number | String;
 }
 
 export default function Indicator(config: Config) {
 	return (
         <Paper
         sx={{
-          p: 2,
+          p: 1,
           display: 'flex',
           flexDirection: 'column'
         }}
       >
-        <Typography component="h2" variant="h6" color="primary" gutterBottom>
-            {config.title} 
-        </Typography>
         <Typography component="p" variant="h4">
             {config.value.toString()}
         </Typography>
